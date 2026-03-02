@@ -51,7 +51,7 @@ img{
     width: 100%;   
     margin: 0px; 
     padding: 30px;  
-    background-image: url(/images/background.jpg);    
+    background-image: url('background.jpg');    
     background-size: cover;
     background-position: center;
     
@@ -95,15 +95,15 @@ nav:hover{
 }
 
 .card:nth-child(1)::before {
-    background-image: url("/images/diana.webp");
+    background-image: url('diana.webp');
 }
 
 .card:nth-child(3)::before {
-    background-image: url("/images/code.jpg");
+    background-image: url('code.jpg');
 }
 
 .card:nth-child(2)::before {
-    background-image: url("/images/iskenderun.jpg");
+    background-image: url('iskenderun.jpg');
 }
 
 .card {
@@ -234,3 +234,4 @@ nav:hover{
         align-items: center;
     }
 }
+
