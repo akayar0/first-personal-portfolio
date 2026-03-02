@@ -1,0 +1,236 @@
+* {
+    
+    box-sizing: border-box; /* Padding ve border'ların genişliği bozmamasını sağlar */
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    height: 100px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    border: 2px solid transparent; /* Kaymayı önlemek için başlangıçta şeffaf border */
+}
+ul{
+    list-style-type:none;
+    display: flex;   
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    color: antiquewhite;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: large;
+    display: inline-block;
+    transition: 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img{
+    width: 200px;
+    margin-left: -875px;
+}
+.anasayfa1{
+    min-height: 100vh;
+    background-color: rgb(20, 20, 20);
+    width: 100%;   
+    margin: 0px; 
+    padding: 30px;  
+    background-image: url(/images/background.jpg);    
+    background-size: cover;
+    background-position: center;
+    
+}
+
+ul li a:hover{
+    color: orange;
+    opacity: 0.8s;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+nav:hover{
+    border: 2px solid bisque;
+    transition: all 0.3s;
+    background-color: black;
+}
+
+.kb1:hover{
+   transition: 0.5s;
+   border: 2px solid orange; 
+    
+}
+
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(1.3px);
+    opacity: 0.6;
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.card:nth-child(1)::before {
+    background-image: url("/images/diana.webp");
+}
+
+.card:nth-child(3)::before {
+    background-image: url("/images/code.jpg");
+}
+
+.card:nth-child(2)::before {
+    background-image: url("/images/iskenderun.jpg");
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 50%; /* Daire formu */
+    
+    /* Margin-left yerine bunu kullan: */
+    margin: 20px auto; 
+    
+    backdrop-filter: blur(1px);
+    transition: transform 0.3s ease; /* Hover efekti için yumuşak geçiş */
+    text-align: center;
+}
+
+.yazi{
+    color:white;
+    text-align: center;
+    align-items: center;
+    padding-top: 0px;
+    position: relative;
+    z-index: 2;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card:hover{
+    border: 1px solid orange;
+    transition: 0.5s;
+    transform: scale(1.1)
+}
+
+.yazi:hover{
+     transition: 0.5s;
+     cursor: pointer;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;        /* Ekran küçüldüğünde kartların taşmasını değil, alta inmesini sağlar */
+
+}
+
+.card-container1 {
+    display: flex; /* Kutuları yan yana dizer */
+    flex-wrap: wrap; /* Ekran daralınca aşağı kaymalarını sağlar */
+    justify-content: center; /* Kutuları sayfada ortalar */
+    gap: 320px; /* Kutuların arasındaki boşluğu sabitler */
+    margin-top: 20px;
+}
+
+.description {
+    width: 300px;
+    height: 200px; /* İçerik çok olursa 'min-height' kullanabilirsin */
+    background-color: rgba(59, 59, 59, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 20px; /* Yazının kenarlara yapışmaması için */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Senin sevdiğin hover efekti */
+.description:hover {
+    border: 1px solid orange;
+    transform: translateY(-5px);
+    border-radius: 45px 15px;
+    background-color: rgba(24, 24, 24, 0.8) ;
+}
+
+/* --- MOBİL UYUMLULUK YAMASI --- */
+@media screen and (max-width: 768px) {
+    
+    nav {
+        height: auto;
+        flex-direction: column; /* Logo ve menüyü alt alta dizer */
+        padding: 20px;
+        margin: 10px;
+        gap: 15px;
+    }
+
+    img {
+        margin-left: 0 !important; /* negatif boşluğu sıfırladık */
+        width: 150px; /* Logoyu biraz küçülttük */
+    }
+
+    ul {
+        flex-wrap: wrap; /* Menü elemanları sığmazsa aşağı kayar */
+        justify-content: center;
+    }
+
+    ul li a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .card {
+        width: 260px; /* Telefon ekranı için boyutları optimize ettik */
+        height: 260px;
+        margin: 20px auto !important; /* Her şeyi ortaladık */
+        transform: scale(1) !important; /* Mobilde taşmayı önlemek için sabit boyuta çektik */
+    }
+
+    .card-container1 {
+        gap: 20px; /* 320px olan boşluğu mobilde 20px'e indirdik */
+        padding: 10px;
+    }
+
+    .description {
+        width: 100%; /* Telefonun genişliğini tam kaplasın */
+        max-width: 320px;
+        margin: 10px auto;
+    }
+
+    .anasayfa1 {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

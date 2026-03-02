@@ -1,0 +1,168 @@
+* {
+    
+    box-sizing: border-box; /* Padding ve border'ların genişliği bozmamasını sağlar */
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    height: 100px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    border: 2px solid transparent; /* Kaymayı önlemek için başlangıçta şeffaf border */
+}
+ul{
+    list-style-type:none;
+    display: flex;   
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    color: antiquewhite;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: large;
+    display: inline-block;
+    transition: 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img{
+    width: 200px;
+    margin-left: -875px;
+}
+.anasayfa1{
+    min-height: 100vh;
+    background-color: rgb(20, 20, 20);
+    width: 100%;   
+    margin: 0px; 
+    padding: 30px;  
+    background-image: url(/images/background.jpg);    
+    background-size: cover;
+    background-position: center;
+    
+}
+
+ul li a:hover{
+    color: orange;
+    opacity: 0.8s;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+nav:hover{
+    border: 2px solid bisque;
+    transition: all 0.3s;
+    background-color: black;
+}
+
+.kb1:hover{
+   transition: 0.5s;
+   border: 2px solid orange; 
+    
+}
+.pp{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: 750px;
+    margin-top: 50px;
+    border-radius: 50%;
+    background-image: url(/images/WhatsApp\ Image\ 2026-01-30\ at\ 02.12.45.jpeg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid orange;
+    width: 300px;
+    min-height: 300px;
+    background-color: gray;
+}
+.pp:hover{
+    transform: translateY(-30px);
+    transition: 0.5s;
+}
+
+.social{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-left: 700px;
+    margin-top: 20px;
+    width: 385px;
+    height: 180px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 25px;
+}
+.social:hover{
+    border: 1px solid bisque;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+.social i:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+/* --- MOBİL UYUMLULUK YAMASI --- */
+@media screen and (max-width: 768px) {
+    
+    nav {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        margin: 15px;
+        gap: 15px;
+    }
+
+    img {
+        margin-left: 0 !important;
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pp {
+        margin-left: auto !important; /* 750px olan margini iptal ettik */
+        margin-right: auto !important;
+        margin-top: 30px;
+        width: 250px; /* Mobilde biraz küçülttük */
+        min-height: 250px;
+    }
+
+    .social {
+        display: block; /* inline-block'tan block'a geçtik */
+        margin-left: auto !important; /* 700px olan margini iptal ettik */
+        margin-right: auto !important;
+        width: 90% !important; /* Ekranın %90'ını kaplasın */
+        max-width: 385px;
+        margin-top: 20px;
+    }
+
+    .anasayfa1 {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
