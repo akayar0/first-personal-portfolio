@@ -1,5 +1,5 @@
 🚀 Kişisel Portföy Web Sitesi
-Bu proje, benim bilgisayar mühendisliği öğrencisi olarak kendimi, yeteneklerimi ve projelerimi tanıtmak amacıyla geliştirdiğim ilk portföy sitemdir. Modern web tasarım trendlerinden olan Glassmorphism estetiğiyle geliştirilmiştir.
+Bu proje, benim bilgisayar mühendisliği öğrencisi olarak kendimi, yeteneklerimi ve projelerimi tanıtmak amacıyla geliştirdiğim ilk portföy sitemdir. Projeyi yaklaşık 2.5 günde hazırladım. Modern web tasarım trendlerinden olan Glassmorphism estetiğiyle geliştirilmiştir.
 
 ✨ Özellikler
 Modern Tasarım: CSS Glassmorphism ve Flexbox kullanılarak estetik bir görünüm sağlandı.
