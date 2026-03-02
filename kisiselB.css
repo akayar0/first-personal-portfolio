@@ -51,7 +51,7 @@ img{
     width: 100%;   
     margin: 0px; 
     padding: 30px;  
-    background-image: url(/images/background.jpg);    
+    background-image: url('background.jpg');    
     background-size: cover;
     background-position: center;
     
@@ -93,15 +93,15 @@ nav:hover{
 }
 
 .card:nth-child(1)::before {
-    background-image: url("/images/ml_yazi.jpg");
+    background-image: url('ml_yazi.jpg');
 }
 
 .card:nth-child(2)::before{
-    background-image: url("/images/mardin.jpeg");
+    background-image: url('mardin.jpeg');
 }
 
 .card:nth-child(3)::before{
-    background-image: url("/images/isteGiris.jpg");
+    background-image: url('isteGiris.jpg');
 }
 
 .card{
@@ -189,4 +189,5 @@ nav:hover{
         padding: 15px;
         background-attachment: scroll; /* Mobilde performans için sabitliği kaldırdık */
     }
+
 }
